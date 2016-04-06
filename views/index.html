@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Example</title>
+        <meta name="description" content="Example">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+        
+    </head>
+    <body>
+		       
+		<table id="dt_example">
+		    <thead>
+		      <tr>
+		        <th>
+		          <section class="title"> id </section>
+		        </th>
+		        <th>
+		          <section class="title"> full_name </section>
+		        </th>
+		        <th>
+		          <section class="title"> country </section>
+		        </th>
+		        <th>
+		          <section class="title"> email </section>
+		        </th>
+		      </tr>
+		    </thead>
+		    <tbody></tbody>
+		</table>
+
+        <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+        <script src="http://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+   	
+        <script>
+
+			$(function() {
+
+				dt = $('#dt_example').dataTable({
+					'processing': true,
+					'serverSide': true,
+					'ajax': '{{ datatable_ajax }}',
+					'columns': {{ datatable_ajax_columns|json_encode|raw() }},
+					'order': {{ datatable_order|json_encode|raw() }},
+					'dom': 'Zlfrtip'
+				});
+
+			});
+
+        </script>
+    </body>
+</html>

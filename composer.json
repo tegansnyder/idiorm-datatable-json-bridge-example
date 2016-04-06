@@ -1,0 +1,38 @@
+{
+    "name": "tegansnyder/idiorm-datatable-json-bridge-example",
+    "type": "library",
+    "description": "Example code of a bridge between the PHP Idiorm ORM and the popular Datatables javascript library.",
+    "keywords": ["idiorm", "datatables", "json"],
+    "homepage": "https://github.com/tegansnyder/idiorm-datatable-json-bridge-example",
+    "support": {
+        "issues": "https://github.com/tegansnyder/idiorm-datatable-json-bridge-example/issues",
+        "source": "https://github.com/tegansnyder/idiorm-datatable-json-bridge-example"
+    },
+    "authors": [
+        {
+            "name": "Tegan Snyder",
+            "email": "tsnyder@tegdesign.com",
+            "homepage": "http://www.tegdesign.com",
+            "role": "Maintainer"
+        }
+    ],
+    "license": [
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "BSD-4-Clause"
+    ],
+    "require": {
+        "php": ">=5.2.0",
+        "slim/slim": "2.*",
+        "slim/views": "0.1.3",
+        "twig/twig": "~1.0",
+        "j4mie/idiorm": "1.5.1",
+        "tegansnyder/idiorm-datatable-json-bridge": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProjectRoot\\" : "",
+            "Tegdesign\\IdiormDatatableBridgeExample\\": "code/"
+        }
+    }
+}
